@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+<ul id="list"><li>a</li><li>b</li><li>c</li></ul>
+<button onclick="insertBeforeNode()">click me</button>
+<script type="text/javascript">
+    function insertBeforeNode(){
+        var list = document.getElementById('list');
+        var newNode = document.createElement('li');
+        var text = document.createTextNode('d');
+        newNode.appendChild(text);
+        list.insertBefore(newNode,list.childNodes[1])
+    }
+</script>
+</body>
+</html>
